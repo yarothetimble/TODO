@@ -1,0 +1,14 @@
+{% extends "tasks/base.html" %}
+
+{% load static %}
+
+{% block title %} Tasks {% endblock %}
+{% block head %} Tasks for {{ request.user }}: {% endblock %}
+
+{% block content %}
+	<ul>
+		{% for task in object_list %}
+			<li><a href="{% url 'tasks:detail' task.id %}">{{ task.title }} </a>{% if task.complete %}<img src = "{% static  'tasks/img/complete_12x16.png' %}" />{% endif %}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

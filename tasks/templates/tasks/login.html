@@ -1,0 +1,28 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %} Login User {% endblock %}
+{% block head %} Please log in {% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm12 col-md-7">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form class="form-horizontal" action="" method="post">
+						{% csrf_token %}
+						{% include 'tasks/form_template.html' %}
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-success">Submit</button>
+							</div>
+						</div>
+					</form>
+					Not registered? <a href="{% url 'tasks:register' %}"> Register now<a/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
