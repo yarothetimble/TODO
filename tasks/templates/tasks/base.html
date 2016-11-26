@@ -4,7 +4,7 @@
 
 <title>
 	{% block title %}
-	{% endblock %}
+	{% endblock %}	
 </title>
 
 <nav class="navbar navbar-default">
@@ -19,17 +19,18 @@
 </nav>
 
 <head>
+	<div style="margin-left:110px;">
 	<h4>
 		{% block head %}
 		{% endblock %}
 	</h4>
+ 	</div>
 </head>
 
 <body>
 	<div class="jumbotron vertical-center">
  		<div class="container">
 		 	{% block content %}
-		 			
 		 	{% endblock %}
  		</div>
  	</div>
