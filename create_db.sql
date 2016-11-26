@@ -1,0 +1,4 @@
+CREATE USER todo_usr WITH PASSWORD 'todo_pw';
+
+CREATE DATABASE todo_db;
+GRANT ALL PRIVILEGES ON DATABASE todo_db TO todo_usr;
