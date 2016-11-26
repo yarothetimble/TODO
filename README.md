@@ -10,10 +10,10 @@ postgresql (tested on version 9.4)
 django (tested on version 1.10)
 
 After installing the above packages, make sure, the postgressql service is running on your local machine.  
-Run script from the project directory 'create_db.sql' via postgres shell command:  
-psql -d template1 < create_db.sql (please make sure you have the right permissions for doing so)
+Run script from the project directory 'create_db.sql' via postgres shell command (please make sure you have the right permissions for doing so):  
+psql -d template1 < create_db.sql
 
-Run these commands from the project directory:
+Run these commands from the project directory:  
 python3 manage.py migrate  
 python3 manage.py runserver
 
