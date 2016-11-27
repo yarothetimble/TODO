@@ -12,7 +12,7 @@ python3-psycopg2
 
 After installing the above packages, make sure, the postgressql service is running on your local machine.  
 Run script from the project directory 'create_db.sql' via postgres shell command (please make sure you have the right permissions for doing so):  
-psql -d template1 < create_db.sql
+psql -d template1 < create_db.sql  
 or as root:  
 sudo -u postgres psql -d template1 < create_db.sql
 
