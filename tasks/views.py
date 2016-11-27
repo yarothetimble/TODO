@@ -76,13 +76,8 @@ class TaskUpdate(LoginRequiredMixin, View):
 			task.user = request.user
 			task.id = kwargs['pk']
 			task.save()
-			return HttpResponseRedirect('/tasks/' + str(kwargs['pk']) + '/update')
+			return HttpResponseRedirect('/tasks/' + str(kwargs['pk']))
 		return render(request, self.template_name, {'form' : form}) 
-
-# class TaskDelete(LoginRequiredMixin, DeleteView):
-# 	model = Task
-# 	login_url = '/tasks/login/'
-# 	success_url = reverse_lazy('tasks.index')
 
 class LoginView(View):
 	form_class = LoginForm
