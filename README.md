@@ -3,7 +3,7 @@
 Simple web application for managing user tasks
 
 ## Installation
-
+Tested on Linux machine (Debian 8)    
 Required packages:  
 python 3.4 or higher  
 postgresql (tested on version 9.4)  
